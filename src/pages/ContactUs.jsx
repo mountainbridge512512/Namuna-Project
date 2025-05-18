@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { FaWhatsapp } from 'react-icons/fa';
+
+
 import dImage from '../assets/d.jpg';
 import contactSVG from '../assets/contact.svg';
 import { User, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
@@ -20,7 +23,7 @@ const ContactUs = () => {
           
           {/* Contact Form */}
           <div data-aos="fade-right">
-            <h2 className="text-3xl font-bold text-green-500 mb-4">Get in Touch</h2>
+            <h2 className="text-3xl font-bold text-green-500 mb-4">Contact Us</h2>
             <p className="text-gray-700 mb-6">
               Fill out the form and our team will get back to you soon.
             </p>
@@ -106,29 +109,61 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Info Boxes */}
-      <section className="px-6 md:px-20 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[...Array(6)].map((_, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-xl shadow-md p-6 border border-green-100 hover:shadow-xl transform transition duration-300 hover:scale-105"
-          >
-            <h3 className="text-lg font-bold text-green-600 mb-2">Name</h3>
-            <p className="text-gray-700 mb-4">John Doe</p>
-            <h3 className="text-lg font-bold text-green-600 mb-2">Contact No.</h3>
-            <p className="text-gray-700 mb-4">+977-9800000000</p>
-            <h3 className="text-lg font-bold text-green-600 mb-2">Address</h3>
-            <p className="text-gray-700">Kathmandu, Nepal</p>
-          </div>
-        ))}
-      </section>
+     {/* Info Boxes */}
+<section className="px-6 md:px-20 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {[
+    {
+      name: 'Third Eye Suppliers',
+      contact: '+977-9845138406',
+      address: 'Balkumari Road,Narayangarh,Chitwan',
+    },
+    {
+      name: 'A&B Suppliers(For Bhaktapur,Kathmandu,Lalitpur)',
+      contact: '+977-9851404023',
+      address: 'Gwarko,Emadol,Lalitpur',
+    },
+    {
+      name: 'Bivian Traders',
+      contact: '+977-9802847535,9802847701',
+      address: 'Masbar,Pokhara',
+    },
+    {
+      name: 'Sulav Departmental Store',
+      contact: '061-462365,+977-9856020676',
+      address: 'Lakeside,Pokhara-06',
+    },
+    {
+      name: 'Subakul Trader',
+      contact: '+977-9847536315',
+      address: 'Kalikanagar,Butwal-11',
+    },
+    {
+      name: 'BS Trading',
+      contact: '+977-9813999263',
+      address: 'Purano Bhadrapur Road,Birtamode',
+    },
+  ].map((item, idx) => (
+    <div
+      key={idx}
+      className="bg-white rounded-xl shadow-md p-6 border border-green-100 hover:shadow-xl transform transition duration-300 hover:scale-105"
+    >
+      <h3 className="text-lg font-bold text-green-600 mb-2">Name</h3>
+      <p className="text-gray-700 mb-4">{item.name}</p>
+      <h3 className="text-lg font-bold text-green-600 mb-2">Contact No.</h3>
+      <p className="text-gray-700 mb-4">{item.contact}</p>
+      <h3 className="text-lg font-bold text-green-600 mb-2">Address</h3>
+      <p className="text-gray-700">{item.address}</p>
+    </div>
+  ))}
+</section>
+
 
       {/* Marquee Section */}
       <section className="py-6 bg-green-100 overflow-hidden">
         <div className="marquee whitespace-nowrap text-lg sm:text-xl text-green-700 font-semibold px-6">
           <span className="inline-block mx-6">📞 Contact us anytime</span>
           <span className="inline-block mx-6">📍 We're here to help</span>
-          <span className="inline-block mx-6">✉️ support@namuna.com</span>
+          <span className="inline-block mx-6">✉️ namunabiomass@gmail.com</span>
           <span className="inline-block mx-6">📦 Fast & Reliable Service</span>
         </div>
       </section>
@@ -144,6 +179,19 @@ const ContactUs = () => {
           100% { transform: translateX(-100%); }
         }
       `}</style>
+
+
+
+       {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/9779845138406"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp size={28} />
+      </a>
     </div>
   );
 };

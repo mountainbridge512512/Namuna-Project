@@ -21,15 +21,15 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
           <div className="flex items-center gap-3">
             <FaPhoneAlt className="text-lg text-green-600" />
-            <span className="text-sm sm:text-base">+977-9800000000</span>
+            <span className="text-sm sm:text-base">+977-9761705550</span>
           </div>
           <div className="flex items-center gap-3">
             <FaEnvelope className="text-lg text-blue-600" />
-            <span className="text-sm sm:text-base">info@namuna.com</span>
+            <span className="text-sm sm:text-base">namunabiomass@gmail.com</span>
           </div>
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="text-lg text-red-600" />
-            <span className="text-sm sm:text-base">Bharatpur, Nepal</span>
+            <span className="text-sm sm:text-base">Mangalpur,Chitwan,Nepal</span>
           </div>
         </div>
 
@@ -38,16 +38,16 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
             <div className="flex gap-4 text-2xl">
-              <a href="#" className="hover:text-blue-600 transition">
+              <a href="https://www.facebook.com/namunabiomass" className="hover:text-blue-600 transition">
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-pink-500 transition">
+              <a href="https://www.instagram.com/namunabiomass/?igsh=dXIwdTJ6cG5jZzM5#" className="hover:text-pink-500 transition">
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-black transition">
+              <a href="https://www.instagram.com/namunabiomass/?igsh=dXIwdTJ6cG5jZzM5#" className="hover:text-black transition">
                 <FaTiktok />
               </a>
-              <a href="#" className="hover:text-red-600 transition">
+              <a href="https://www.youtube.com/@namunabiomasspvtltd7715" className="hover:text-red-600 transition">
                 <FaYoutube />
               </a>
             </div>

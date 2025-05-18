@@ -9,11 +9,14 @@ import WorkWithUs from './pages/WorkWithUs';
 import MediaAndArticle from'./pages/MediaAndArticle';
 
 
+
+
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/ourproducts" element={<OurProduct />} />

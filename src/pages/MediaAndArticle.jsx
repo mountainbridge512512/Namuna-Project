@@ -3,6 +3,9 @@ import 'aos/dist/aos.css';
 import 'react-image-lightbox/style.css';
 import Lightbox from "react-image-lightbox";
 
+import { FaWhatsapp } from 'react-icons/fa';
+
+
 import gallery1 from "../assets/gallery1.jpg";
 import gallery2 from "../assets/gallery2.jpg";
 import gallery3 from "../assets/gallery3.jpg";
@@ -78,7 +81,7 @@ const MediaArticles = () => {
       {/* Articles */}
       <div data-aos="fade-up">
         <h2 className="text-3xl font-bold text-green-500 mb-8 text-center">
-          Featured Articles
+          Our Articles & Blogs
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           {/* Article Cards */}
@@ -136,6 +139,9 @@ const MediaArticles = () => {
             </button>
           </div>
         )}
+
+
+        
       </div>
 
       {/* Lightbox */}
@@ -175,7 +181,24 @@ const MediaArticles = () => {
           Purna Bhahadur Praja (Chepang) is a habitant of Korak VDC, Dadh Khola. ... (Full content here)
         </Modal>
       )}
+
+{/* ----------  WhatsApp floating button  ---------- */}
+ <a
+  href="https://wa.me/9779845138406"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 flex items-center justify-center
+             h-14 w-14 rounded-full bg-green-500 text-white shadow-md
+             hover:bg-green-600 transition-transform duration-300
+             hover:scale-105 animate-pulse-slow"
+>
+  <FaWhatsapp className="h-7 w-7" />
+  <span className="sr-only">Chat on WhatsApp</span>
+</a>
+
     </section>
+
+    
   );
 };
 

@@ -11,6 +11,9 @@ import {
   MessageCircle
 } from 'lucide-react';
 
+import { FaWhatsapp } from 'react-icons/fa';
+
+
 const WorkWithUs = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -21,12 +24,13 @@ const WorkWithUs = () => {
     <div className="pt-20 bg-white text-gray-800">
       {/* Hero Section */}
       <section className="text-center px-6 md:px-20 py-16 bg-green-50">
-        <p className="text-lg md:text-xl text-green-700 font-medium mb-2" data-aos="fade-down">
-          “Join our mission to create something impactful.”
-        </p>
         <h1 className="text-4xl md:text-5xl font-bold text-green-800" data-aos="fade-up">
-          Work With Us
+          Join Our Team
         </h1>
+        <p className="text-lg md:text-xl text-green-700 font-medium mb-2" data-aos="fade-down">
+          “Explore exciting career opportunities at Namuna Biomass.We are looking for talented and passionate individuals to join our team.”
+        </p>
+        
       </section>
 
       {/* Application Form Section */}
@@ -127,11 +131,9 @@ const WorkWithUs = () => {
                 required
                 className="w-full pl-10 border-b-2 border-gray-300 focus:border-green-500 bg-transparent p-3 text-gray-700 outline-none transition duration-300"
               >
-                <option value="">Select Position</option>
-                <option value="frontend">Frontend Developer</option>
-                <option value="backend">Backend Developer</option>
-                <option value="designer">UI/UX Designer</option>
-                <option value="marketing">Digital Marketing</option>
+                <option value="">Become Wholeseller</option>
+                <option value="frontend">Become Retailer</option>
+                <option value="backend">Internship</option>
               </select>
             </div>
 
@@ -172,6 +174,19 @@ const WorkWithUs = () => {
           </form>
         </div>
       </section>
+
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/9779845138406"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp size={28} />
+      </a>
+
     </div>
   );
 };

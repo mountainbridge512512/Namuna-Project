@@ -3,6 +3,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 
+import { FaWhatsapp } from 'react-icons/fa';
+
+
 import charcoalImg from '../assets/charcoal.jpg';
 import charcoal1 from '../assets/charcoal1.jpg';
 import biomassImg from '../assets/wood.jpg';
@@ -16,6 +19,8 @@ import brand1 from '../assets/brand1.png';
 import brand2 from '../assets/brand2.png';
 import brand3 from '../assets/brand3.png';
 import brand4 from '../assets/brand4.png';
+import powderImg from '../assets/powder.png';
+import powder2Img from '../assets/powder2.png';
 
 const OurProduct = () => {
   useEffect(() => {
@@ -24,6 +29,7 @@ const OurProduct = () => {
 
   const [charcoalPreview, setCharcoalPreview] = useState(charcoalImg);
   const [biomassPreview, setBiomassPreview] = useState(biomassImg);
+  const [powderPreview, setPowderPreview] = useState(powderImg);
 
   return (
     <div className="pt-20 bg-white text-gray-800">
@@ -89,10 +95,9 @@ const OurProduct = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center" data-aos="fade-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-4">Charcoal Briquettes</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-4">Namuna Charcoal Briquettes</h2>
           <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-            Our charcoal briquettes are made from 100% organic waste and deliver high heat with low ash content.
-            Perfect for grilling, heating, and industrial use.
+            Namuna Biomass Pvt. Ltd. produces high-quality, eco-friendly charcoal briquettes from 100% natural biomass waste. Our cost-effective and efficient briquettes offer a sustainable alternative to traditional charcoal and fossil fuels, promoting cleaner energy solutions.
           </p>
         </div>
       </section>
@@ -100,9 +105,9 @@ const OurProduct = () => {
       {/* Product 2 - Biomass */}
       <section className="px-4 md:px-20 py-16 grid md:grid-cols-2 gap-10 bg-gray-50">
         <div className="flex flex-col justify-center" data-aos="fade-right">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-4">Biomass Pellets</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-4">Namuna Wood Charcoal</h2>
           <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-            Our biomass pellets are compact, efficient, and made for clean combustion. Ideal for biomass stoves and boilers.
+            Namuna Biomass Pvt. Ltd. offers high-quality natural hardwood charcoal, crafted from carefully selected hardwood to ensure superior performance, purity, and sustainability. Our charcoal is free from chemicals and additives, making it the perfect choice for grilling, BBQs, and industrial applications.
           </p>
         </div>
         <div className="flex flex-col justify-center" data-aos="fade-left">
@@ -129,9 +134,43 @@ const OurProduct = () => {
         </div>
       </section>
 
+
+      {/* Product 3 - Charcoal Powder */}
+<section className="px-4 md:px-20 py-16 grid md:grid-cols-2 gap-10">
+  <div className="flex flex-col justify-center" data-aos="fade-right">
+    <div className="w-full max-w-md mx-auto">
+      <img
+        src={powderPreview}
+        alt="Charcoal Powder"
+        className="rounded-xl shadow-md w-full h-auto"
+      />
+    </div>
+    <div className="flex gap-4 mt-4 justify-center">
+      {[powderImg, powder2Img].map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={`Powder angle ${idx + 1}`}
+          className={`w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md border-2 cursor-pointer ${
+            powderPreview === img ? 'border-green-600' : 'border-gray-300'
+          }`}
+          onClick={() => setPowderPreview(img)}
+        />
+      ))}
+    </div>
+  </div>
+  <div className="flex flex-col justify-center" data-aos="fade-left">
+    <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-4">Namuna Charcoal Powder</h2>
+    <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+      Namuna Biomass Charcoal Powder improves soil properties, especially when finely ground and mixed into the soil.It also enhances the composting process.When it is used on animal beeding,charcoal helps absorb urine and reduce ammonia odor.Biochar is highly stable and can persist in soil for hundreds to thousands of years,helipng trap carbon and mitigate climated change.
+    </p>
+  </div>
+</section>
+
+
       {/* Brand Carousel */}
       <section className="py-16 px-4 md:px-20 text-center bg-white">
-        <h2 className="text-3xl font-bold text-green-500 mb-12">Our Brand Partners</h2>
+        <h2 className="text-3xl font-bold text-green-500 mb-12">Our Products Available At</h2>
         <div className="relative overflow-hidden w-full max-w-7xl mx-auto">
           <motion.div
             className="flex gap-20 w-max"
@@ -152,6 +191,40 @@ const OurProduct = () => {
           </motion.div>
         </div>
       </section>
+
+      
+      <section className="py-4 px-4 md:px-8 lg:px-16 bg-[#f9f9f9]" data-aos="fade-up">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    {/* Left Side - Image */}
+    <div className="flex justify-center" data-aos="fade-right" data-aos-delay="100">
+  <div className="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500 w-[20rem] h-72 md:w-[24rem] md:h-72">
+    <img
+      src="/probrochure.jpg"
+      alt="Product Brochure Mockup"
+      className="w-full h-full object-cover rounded-xl"
+    />
+  </div>
+</div>
+
+
+    {/* Right Side - Text and Button */}
+    <div data-aos="fade-left" data-aos-delay="200" className="text-center md:text-left">
+      <h2 className="text-3xl font-bold text-green-700 mb-3">Download Product Brochure</h2>
+      <p className="text-gray-700 mb-4 text-base leading-relaxed">
+        Explore detailed information about our eco-friendly briquettes and pellets. Download the brochure to learn more about product specifications, benefits, and applications.
+      </p>
+      <a
+        href="/product.pdf"
+        download
+        className="inline-block bg-green-600 text-white text-sm font-semibold px-6 py-3 rounded-full shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300"
+      >
+        Download Brochure (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Why Namuna Briquettes */}
       <section className="py-16 px-4 md:px-20 text-center">
@@ -201,6 +274,18 @@ const OurProduct = () => {
           }
         `}
       </style>
+
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/9779845138406"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp size={28} />
+      </a>
     </div>
   );
 };
